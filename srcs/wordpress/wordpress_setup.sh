@@ -14,7 +14,8 @@ TMP_PATH="/tmp/wordpress"
 # > /dev/null - https://linuxhint.com/what_is_dev_null/
 
 tar xf $TMP_PATH/$WORDPRESS_DISTR -C $WORDPRESS_PATH
-rm -rf $WORDPRESS_DISTR
+mv  $WORDPRESS_PATH/wordpress/* $WORDPRESS_PATH
+rm -rvf $TMP_PATH/$WORDPRESS_DISTR
 
 # https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-debian-10
 # Start by giving ownership of all the files to the www-data user and group.

@@ -9,7 +9,7 @@ TMP_DIR="/tmp/nginx"
 service nginx start
 
 #remove the default symlink in sites-enabled
-rm -rf $SITES_ENABLED/default
+rm -rvf $SITES_ENABLED/default
 
 #copy server block file
 cp $TMP_DIR/nginx.conf $SITES_AVAILABLE/localhost
