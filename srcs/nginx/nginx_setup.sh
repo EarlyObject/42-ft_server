@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo -e "\n \t\t\e[92mnginx SETUP\e[0m"
+
 SITES_AVAILABLE="/etc/nginx/sites-available"
 SITES_ENABLED="/etc/nginx/sites-enabled"
 TMP_DIR="/tmp/nginx"

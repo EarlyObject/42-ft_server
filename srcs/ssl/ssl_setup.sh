@@ -1,6 +1,7 @@
 #!/bin/bash
 
-echo STARTING SSL SETUP
+echo -e "\n \t\t\e[92mSSL SETUP\e[0m"
+
 SSL_PATH=/etc/nginx/ssl
 
 mkdir $SSL_PATH
@@ -31,5 +32,3 @@ openssl req -newkey rsa:2048 \
 			-out $SSL_PATH/localhost.crt \
 			-keyout $SSL_PATH/localhost.key \
 			-subj "/C=ES/ST=Madrid/L=Madrid/O=42/OU=asydykna/CN=localhost"
-
-echo SSL SETUP FINISHED

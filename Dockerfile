@@ -1,14 +1,15 @@
 FROM debian:buster
 
-ENV AUTOINDEX on
-
 #update package list and install services
-RUN apt-get update -y && apt-get install\
+# -y - automatic yes to prompts; 
+RUN apt-get update -y && apt-get install \
+	apt-utils -y \
+	curl -y \
+	mariadb-server -y \
 	nano -y \
 	nginx -y \
-	mariadb-server -y \
-	php7.3-fpm php7.3-mysql -y\
-	openssl -y
+	openssl -y \
+	php7.3-fpm php7.3-mysql php7.3-xml php7.3-cli php7.3-mbstring -y
 
 EXPOSE 80 443
 
