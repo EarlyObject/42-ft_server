@@ -11,10 +11,9 @@ TMP_PATH="/tmp/wordpress"
 # v - Operate verbosely.
 # f - Use archive file (or device) ARCHIVE.
 # -C DIR - Change to directory DIR before performing any operations.
-# > /dev/null - https://linuxhint.com/what_is_dev_null/
 
 tar xf $TMP_PATH/$WORDPRESS_DISTR -C $WORDPRESS_PATH
-mv  $WORDPRESS_PATH/wordpress/* $WORDPRESS_PATH
+mv $WORDPRESS_PATH/wordpress/* $WORDPRESS_PATH
 rm -rvf $TMP_PATH/$WORDPRESS_DISTR
 
 # https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-debian-10

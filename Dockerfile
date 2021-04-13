@@ -9,7 +9,9 @@ RUN apt-get update -y && apt-get install \
 	nano -y \
 	nginx -y \
 	openssl -y \
-	php7.3-fpm php7.3-mysql php7.3-xml php7.3-cli php7.3-mbstring -y
+	php7.3-fpm php7.3-mysql php7.3-xml php7.3-cli php7.3-mbstring -y \
+	&& apt-get clean \
+	&& rm -rf /var/lib/apt/lists/*
 
 EXPOSE 80 443
 
